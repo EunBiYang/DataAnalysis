@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d5c1f4757a144124aa656fd57812e4b4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    <h3 align="center" style="font-size:20px">맛집 10곳</h3>
+    
+            <div class="folium-map" id="map_d5c1f4757a144124aa656fd57812e4b4" ></div>
+        
+</body>
+<script>    
+    
+            var map_d5c1f4757a144124aa656fd57812e4b4 = L.map(
+                "map_d5c1f4757a144124aa656fd57812e4b4",
+                {
+                    center: [37.54135491595138, 127.00820476244883],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e708d1e228fd4bd4b7c4ab7bb5d1e714 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var marker_4b350d632367464e96f3b9cd67c3d398 = L.marker(
+                [37.5241916888758, 127.038241721129],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_edead4e69a73422db5df3d947ca1592d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon-music", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4b350d632367464e96f3b9cd67c3d398.setIcon(icon_edead4e69a73422db5df3d947ca1592d);
+        
+    
+        var popup_8a6a1a704bd84e609da210b49e286590 = L.popup({"maxWidth": 200});
+
+        
+            var html_4a84e9e57c774af7b7cabac9e4ec678a = $(`<div id="html_4a84e9e57c774af7b7cabac9e4ec678a" style="width: 100.0%; height: 100.0%;">도넛이 맛있는 집</div>`)[0];
+            popup_8a6a1a704bd84e609da210b49e286590.setContent(html_4a84e9e57c774af7b7cabac9e4ec678a);
+        
+
+        marker_4b350d632367464e96f3b9cd67c3d398.bindPopup(popup_8a6a1a704bd84e609da210b49e286590)
+        ;
+
+        
+    
+    
+            marker_4b350d632367464e96f3b9cd67c3d398.bindTooltip(
+                `<div>
+                     카페노티드
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8ecaa115e41c45b3b17ce0baffa81e04 = L.marker(
+                [37.5372491556576, 126.999715325041],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_55f59f6e1a944bd48870e80fc1133abd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon-camera", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_8ecaa115e41c45b3b17ce0baffa81e04.setIcon(icon_55f59f6e1a944bd48870e80fc1133abd);
+        
+    
+        var popup_96bde76d9b444f5086025872db0f4c8a = L.popup({"maxWidth": 200});
+
+        
+            var html_f289e4ce725d470b9ad5bfa2fa2feaaf = $(`<div id="html_f289e4ce725d470b9ad5bfa2fa2feaaf" style="width: 100.0%; height: 100.0%;">분위기 좋은 카페</div>`)[0];
+            popup_96bde76d9b444f5086025872db0f4c8a.setContent(html_f289e4ce725d470b9ad5bfa2fa2feaaf);
+        
+
+        marker_8ecaa115e41c45b3b17ce0baffa81e04.bindPopup(popup_96bde76d9b444f5086025872db0f4c8a)
+        ;
+
+        
+    
+    
+            marker_8ecaa115e41c45b3b17ce0baffa81e04.bindTooltip(
+                `<div>
+                     komune
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e615e83f9b484b43bbefc270bfee7a82 = L.marker(
+                [37.5688643430719, 126.994849801841],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_5d74c92a1267419e9157ee7fceb5a1e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon-star-empty", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e615e83f9b484b43bbefc270bfee7a82.setIcon(icon_5d74c92a1267419e9157ee7fceb5a1e0);
+        
+    
+        var popup_405d11af13b842e2a8bf92000e537bca = L.popup({"maxWidth": 200});
+
+        
+            var html_17e46e40a79e422fa52ccc886dd6f146 = $(`<div id="html_17e46e40a79e422fa52ccc886dd6f146" style="width: 100.0%; height: 100.0%;">외관이 멋진 카페</div>`)[0];
+            popup_405d11af13b842e2a8bf92000e537bca.setContent(html_17e46e40a79e422fa52ccc886dd6f146);
+        
+
+        marker_e615e83f9b484b43bbefc270bfee7a82.bindPopup(popup_405d11af13b842e2a8bf92000e537bca)
+        ;
+
+        
+    
+    
+            marker_e615e83f9b484b43bbefc270bfee7a82.bindTooltip(
+                `<div>
+                     앵글340
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b51f43294453463c87e2060b475ec8b2 = L.marker(
+                [37.5569654035088, 126.978139103837],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_e371ca934c404c31a457f3da8a1b550c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon-leaf", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b51f43294453463c87e2060b475ec8b2.setIcon(icon_e371ca934c404c31a457f3da8a1b550c);
+        
+    
+        var popup_54328f105825426192094fba55965081 = L.popup({"maxWidth": 200});
+
+        
+            var html_e362af644451434d8020cdaa784f7d03 = $(`<div id="html_e362af644451434d8020cdaa784f7d03" style="width: 100.0%; height: 100.0%;">전시회장과 함께 있는 카페</div>`)[0];
+            popup_54328f105825426192094fba55965081.setContent(html_e362af644451434d8020cdaa784f7d03);
+        
+
+        marker_b51f43294453463c87e2060b475ec8b2.bindPopup(popup_54328f105825426192094fba55965081)
+        ;
+
+        
+    
+    
+            marker_b51f43294453463c87e2060b475ec8b2.bindTooltip(
+                `<div>
+                     picnic
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16dd3d593c6444e7ba448ffbfcebcbe1 = L.marker(
+                [37.5367837613965, 127.0115871945],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_c82dc0eecfdd4a5b8d277e221e026ed2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon-glass", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_16dd3d593c6444e7ba448ffbfcebcbe1.setIcon(icon_c82dc0eecfdd4a5b8d277e221e026ed2);
+        
+    
+        var popup_d01d8276a85a48678698e6dbe62b9f2f = L.popup({"maxWidth": 200});
+
+        
+            var html_c3262f37ac5b4d51b504ec28cec5d04f = $(`<div id="html_c3262f37ac5b4d51b504ec28cec5d04f" style="width: 100.0%; height: 100.0%;">한남동 프랑스 식당</div>`)[0];
+            popup_d01d8276a85a48678698e6dbe62b9f2f.setContent(html_c3262f37ac5b4d51b504ec28cec5d04f);
+        
+
+        marker_16dd3d593c6444e7ba448ffbfcebcbe1.bindPopup(popup_d01d8276a85a48678698e6dbe62b9f2f)
+        ;
+
+        
+    
+    
+            marker_16dd3d593c6444e7ba448ffbfcebcbe1.bindTooltip(
+                `<div>
+                     reveat
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d57fbdc024d4c538773d541418d784e = L.marker(
+                [37.5303509410215, 126.9713078372],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_542246265e84449a8fc25a4ec32eaa0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-remove-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_2d57fbdc024d4c538773d541418d784e.setIcon(icon_542246265e84449a8fc25a4ec32eaa0f);
+        
+    
+        var popup_01818873f2f042dd9717039f1d016257 = L.popup({"maxWidth": 200});
+
+        
+            var html_09e6568c91b94c7cb9b5a9cd35084b87 = $(`<div id="html_09e6568c91b94c7cb9b5a9cd35084b87" style="width: 100.0%; height: 100.0%;">현지 분위를 느낄수 있는 베트남 식당</div>`)[0];
+            popup_01818873f2f042dd9717039f1d016257.setContent(html_09e6568c91b94c7cb9b5a9cd35084b87);
+        
+
+        marker_2d57fbdc024d4c538773d541418d784e.bindPopup(popup_01818873f2f042dd9717039f1d016257)
+        ;
+
+        
+    
+    
+            marker_2d57fbdc024d4c538773d541418d784e.bindTooltip(
+                `<div>
+                     효뜨
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a4b83afb3d64f0ab3df2b72710d8f3c = L.marker(
+                [37.5348433010452, 127.000858183704],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_8d8757e1c4824341823b60dd313d466c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-bell", "iconColor": "white", "markerColor": "white", "prefix": "glyphicon"}
+            );
+            marker_5a4b83afb3d64f0ab3df2b72710d8f3c.setIcon(icon_8d8757e1c4824341823b60dd313d466c);
+        
+    
+        var popup_1ac201c263c1428b99ffc69d1e06f73b = L.popup({"maxWidth": 200});
+
+        
+            var html_aae9b95b1327460b96c496ffc348d5de = $(`<div id="html_aae9b95b1327460b96c496ffc348d5de" style="width: 100.0%; height: 100.0%;">수제버거가 맜있는 집</div>`)[0];
+            popup_1ac201c263c1428b99ffc69d1e06f73b.setContent(html_aae9b95b1327460b96c496ffc348d5de);
+        
+
+        marker_5a4b83afb3d64f0ab3df2b72710d8f3c.bindPopup(popup_1ac201c263c1428b99ffc69d1e06f73b)
+        ;
+
+        
+    
+    
+            marker_5a4b83afb3d64f0ab3df2b72710d8f3c.bindTooltip(
+                `<div>
+                     다운타우너
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b3096c0ec34d48f3ac24120ae05288ec = L.marker(
+                [37.5253737056184, 127.048780188752],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_34ac315c7a634d50b8a181ac09dd8b52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-bookmark", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_b3096c0ec34d48f3ac24120ae05288ec.setIcon(icon_34ac315c7a634d50b8a181ac09dd8b52);
+        
+    
+        var popup_208410ebf63c456ea91aa7240a07c489 = L.popup({"maxWidth": 200});
+
+        
+            var html_dc797c7762654e1a8cda618cdda44525 = $(`<div id="html_dc797c7762654e1a8cda618cdda44525" style="width: 100.0%; height: 100.0%;">분위기 좋은 브루펍</div>`)[0];
+            popup_208410ebf63c456ea91aa7240a07c489.setContent(html_dc797c7762654e1a8cda618cdda44525);
+        
+
+        marker_b3096c0ec34d48f3ac24120ae05288ec.bindPopup(popup_208410ebf63c456ea91aa7240a07c489)
+        ;
+
+        
+    
+    
+            marker_b3096c0ec34d48f3ac24120ae05288ec.bindTooltip(
+                `<div>
+                     카브루브루펍
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8e66707ce48f43c0808e23e8b45889d1 = L.marker(
+                [37.5262670303565, 127.034527389489],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_92adab0cf65843b5a7b52e75889c27b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-play", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+            );
+            marker_8e66707ce48f43c0808e23e8b45889d1.setIcon(icon_92adab0cf65843b5a7b52e75889c27b5);
+        
+    
+        var popup_b40e0b33352a4d8996be7173b35467b6 = L.popup({"maxWidth": 200});
+
+        
+            var html_bd31b655d1f34e228fcc1f81f41d1d72 = $(`<div id="html_bd31b655d1f34e228fcc1f81f41d1d72" style="width: 100.0%; height: 100.0%;">와인과 하몽메론이 맛잇는 집</div>`)[0];
+            popup_b40e0b33352a4d8996be7173b35467b6.setContent(html_bd31b655d1f34e228fcc1f81f41d1d72);
+        
+
+        marker_8e66707ce48f43c0808e23e8b45889d1.bindPopup(popup_b40e0b33352a4d8996be7173b35467b6)
+        ;
+
+        
+    
+    
+            marker_8e66707ce48f43c0808e23e8b45889d1.bindTooltip(
+                `<div>
+                     달마시안
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab16bff143cf45ccb38358d421d2f557 = L.marker(
+                [37.5726598289616, 127.004040878995],
+                {}
+            ).addTo(map_d5c1f4757a144124aa656fd57812e4b4);
+        
+    
+            var icon_80b2884747e3439cad034af4f7021b01 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-map-marker", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_ab16bff143cf45ccb38358d421d2f557.setIcon(icon_80b2884747e3439cad034af4f7021b01);
+        
+    
+        var popup_1ac1e31ab67d4db0a166bea1ab726468 = L.popup({"maxWidth": 200});
+
+        
+            var html_568cf252ec064e00b3dd87522a8c2ab6 = $(`<div id="html_568cf252ec064e00b3dd87522a8c2ab6" style="width: 100.0%; height: 100.0%;">육회가 맛있는 집</div>`)[0];
+            popup_1ac1e31ab67d4db0a166bea1ab726468.setContent(html_568cf252ec064e00b3dd87522a8c2ab6);
+        
+
+        marker_ab16bff143cf45ccb38358d421d2f557.bindPopup(popup_1ac1e31ab67d4db0a166bea1ab726468)
+        ;
+
+        
+    
+    
+            marker_ab16bff143cf45ccb38358d421d2f557.bindTooltip(
+                `<div>
+                     백제정육
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

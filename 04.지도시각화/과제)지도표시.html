@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>미니프로젝트_양은비</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>과제)지도표시</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -13971,7 +13971,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="%EB%AF%B8%EB%8B%88%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">&#48120;&#45768;&#54532;&#47196;&#51229;&#53944;<a class="anchor-link" href="#%EB%AF%B8%EB%8B%88%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">&#182;</a></h1>
+<h1 id="%ED%95%AB%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4-10-%EA%B3%B3!">&#54635;&#54540;&#47112;&#51060;&#49828; 10 &#44275;!<a class="anchor-link" href="#%ED%95%AB%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4-10-%EA%B3%B3!">&#182;</a></h1>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
@@ -13981,9 +13981,21 @@ a.anchor-link {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1. 위치 위도경도 가져오기</span>
+<span class="c1"># 2. 지도위에 표시하기</span>
 </pre></div>
 
      </div>
@@ -13994,17 +14006,17 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="1)CCTV-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0">1)CCTV &#45936;&#51060;&#53552; &#51221;&#47532;&#54616;&#44592;<a class="anchor-link" href="#1)CCTV-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0">&#182;</a></h2>
+<h3 id="1.%EC%B9%B4%EC%B9%B4%EC%98%A4API%EC%82%AC%EC%9A%A9-%EC%9C%84%EB%8F%84,%EA%B2%BD%EB%8F%84-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0">1.&#52852;&#52852;&#50724;API&#49324;&#50857; &#50948;&#46020;,&#44221;&#46020; &#44032;&#51256;&#50724;&#44592;<a class="anchor-link" href="#1.%EC%B9%B4%EC%B9%B4%EC%98%A4API%EC%82%AC%EC%9A%A9-%EC%9C%84%EB%8F%84,%EA%B2%BD%EB%8F%84-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0">&#182;</a></h3>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#데이터 파일 읽기</span>
-<span class="n">cctv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;서울시CCTV설치운영현황(자치구)_년도별_211231기준.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;EUC-KR&#39;</span><span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-<span class="n">cctv</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">quote</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
      </div>
@@ -14012,142 +14024,33 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;kakaoapikey.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">kakao_key</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
 
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구분</th>
-      <th>총계</th>
-      <th>2012년 이전</th>
-      <th>2012년</th>
-      <th>2013년</th>
-      <th>2014년</th>
-      <th>2015년</th>
-      <th>2016년</th>
-      <th>2017년</th>
-      <th>2018년</th>
-      <th>2019년</th>
-      <th>2020년</th>
-      <th>2021년</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>계</td>
-      <td>83557</td>
-      <td>4812</td>
-      <td>1851.0</td>
-      <td>3434.0</td>
-      <td>4295</td>
-      <td>6840</td>
-      <td>8708</td>
-      <td>11572</td>
-      <td>10627</td>
-      <td>12267</td>
-      <td>11247</td>
-      <td>7904</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>1715</td>
-      <td>815</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>195</td>
-      <td>150</td>
-      <td>0</td>
-      <td>261</td>
-      <td>85</td>
-      <td>9</td>
-      <td>200</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중 구</td>
-      <td>2447</td>
-      <td>16</td>
-      <td>114.0</td>
-      <td>87.0</td>
-      <td>77</td>
-      <td>236</td>
-      <td>240</td>
-      <td>372</td>
-      <td>386</td>
-      <td>155</td>
-      <td>361</td>
-      <td>403</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>2611</td>
-      <td>34</td>
-      <td>71.0</td>
-      <td>234.0</td>
-      <td>125</td>
-      <td>221</td>
-      <td>298</td>
-      <td>351</td>
-      <td>125</td>
-      <td>307</td>
-      <td>617</td>
-      <td>228</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>3829</td>
-      <td>163</td>
-      <td>144.0</td>
-      <td>208.0</td>
-      <td>107</td>
-      <td>325</td>
-      <td>255</td>
-      <td>967</td>
-      <td>415</td>
-      <td>490</td>
-      <td>472</td>
-      <td>283</td>
-    </tr>
-  </tbody>
-</table>
+     </div>
+</div>
 </div>
 </div>
 
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Authorization&#39;</span> <span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;KakaoAK </span><span class="si">{</span><span class="n">kakao_key</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">}</span>
+</pre></div>
 
+     </div>
 </div>
-
+</div>
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14156,8 +14059,10 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Null data 확인하기</span>
-<span class="n">cctv</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">local_url</span> <span class="o">=</span> <span class="s2">&quot;https://dapi.kakao.com/v2/local/search/address.json&quot;</span>
+<span class="n">addr</span> <span class="o">=</span> <span class="s1">&#39;서울특별시 용산구 이태원로49길 14-2 1층&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">local_url</span><span class="si">}</span><span class="s1">?query=</span><span class="si">{</span><span class="n">quote</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">url</span>
 </pre></div>
 
      </div>
@@ -14179,197 +14084,7 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>구분          0
-총계          0
-2012년 이전    0
-2012년       1
-2013년       1
-2014년       0
-2015년       0
-2016년       0
-2017년       0
-2018년       0
-2019년       0
-2020년       0
-2021년       0
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Null값 0으로 대체하기</span>
-<span class="n">cctv</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#2021년을 제외한 최근 3개년간의 CCTV 증가율 구하기</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">cctv</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;2012년&#39;</span><span class="p">,</span><span class="s1">&#39;2013년&#39;</span><span class="p">,</span><span class="s1">&#39;2014년&#39;</span><span class="p">,</span><span class="s1">&#39;2015년&#39;</span><span class="p">,</span><span class="s1">&#39;2016년&#39;</span><span class="p">,</span><span class="s1">&#39;2017년&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">cctv</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s1">&#39;2018년&#39;</span><span class="p">,</span><span class="s1">&#39;2019년&#39;</span><span class="p">,</span><span class="s1">&#39;2020년&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
-<span class="n">cctv</span><span class="p">[</span><span class="s1">&#39;최근증가율&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="o">/</span><span class="n">a</span>
-<span class="n">cctv</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구분</th>
-      <th>총계</th>
-      <th>2012년 이전</th>
-      <th>2012년</th>
-      <th>2013년</th>
-      <th>2014년</th>
-      <th>2015년</th>
-      <th>2016년</th>
-      <th>2017년</th>
-      <th>2018년</th>
-      <th>2019년</th>
-      <th>2020년</th>
-      <th>2021년</th>
-      <th>최근증가율</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>계</td>
-      <td>83557</td>
-      <td>4812</td>
-      <td>1851.0</td>
-      <td>3434.0</td>
-      <td>4295</td>
-      <td>6840</td>
-      <td>8708</td>
-      <td>11572</td>
-      <td>10627</td>
-      <td>12267</td>
-      <td>11247</td>
-      <td>7904</td>
-      <td>108.677383</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>1715</td>
-      <td>815</td>
-      <td>0</td>
-      <td>0</td>
-      <td>195</td>
-      <td>150</td>
-      <td>0</td>
-      <td>261</td>
-      <td>85</td>
-      <td>9</td>
-      <td>200</td>
-      <td>0</td>
-      <td>48.514851</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중 구</td>
-      <td>2447</td>
-      <td>16</td>
-      <td>114.0</td>
-      <td>87.0</td>
-      <td>77</td>
-      <td>236</td>
-      <td>240</td>
-      <td>372</td>
-      <td>386</td>
-      <td>155</td>
-      <td>361</td>
-      <td>403</td>
-      <td>97.513514</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>2611</td>
-      <td>34</td>
-      <td>71.0</td>
-      <td>234.0</td>
-      <td>125</td>
-      <td>221</td>
-      <td>298</td>
-      <td>351</td>
-      <td>125</td>
-      <td>307</td>
-      <td>617</td>
-      <td>228</td>
-      <td>105.427136</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>3829</td>
-      <td>163</td>
-      <td>144.0</td>
-      <td>208.0</td>
-      <td>107</td>
-      <td>325</td>
-      <td>255</td>
-      <td>967</td>
-      <td>415</td>
-      <td>490</td>
-      <td>472</td>
-      <td>283</td>
-      <td>83.252721</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<pre>&#39;https://dapi.kakao.com/v2/local/search/address.json?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%ED%83%9C%EC%9B%90%EB%A1%9C49%EA%B8%B8%2014-2%201%EC%B8%B5&#39;</pre>
 </div>
 
 </div>
@@ -14384,456 +14099,8 @@ dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#구분, 총계, 최근증가율 커럼만 추출하고 컬럼명을 구별, cctv댓수로 변경하기</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">cctv</span><span class="p">[[</span><span class="s1">&#39;구분&#39;</span><span class="p">,</span><span class="s1">&#39;총계&#39;</span><span class="p">,</span><span class="s1">&#39;최근증가율&#39;</span><span class="p">]]</span>
-<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;구분&#39;</span><span class="p">:</span><span class="s1">&#39;구별&#39;</span><span class="p">,</span><span class="s1">&#39;총계&#39;</span><span class="p">:</span><span class="s1">&#39;cctv댓수&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구별</th>
-      <th>cctv댓수</th>
-      <th>최근증가율</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>계</td>
-      <td>83557</td>
-      <td>108.677383</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>1715</td>
-      <td>48.514851</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중 구</td>
-      <td>2447</td>
-      <td>97.513514</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>2611</td>
-      <td>105.427136</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>3829</td>
-      <td>83.252721</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#구 이름에서 공백 지우기</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;구별&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;구별&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구별</th>
-      <th>cctv댓수</th>
-      <th>최근증가율</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>계</td>
-      <td>83557</td>
-      <td>108.677383</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>1715</td>
-      <td>48.514851</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중구</td>
-      <td>2447</td>
-      <td>97.513514</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>2611</td>
-      <td>105.427136</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>3829</td>
-      <td>83.252721</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#첫번째 행(계) 지우기</span>
-<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구별</th>
-      <th>cctv댓수</th>
-      <th>최근증가율</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>1715</td>
-      <td>48.514851</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중구</td>
-      <td>2447</td>
-      <td>97.513514</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>2611</td>
-      <td>105.427136</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>3829</td>
-      <td>83.252721</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>광진구</td>
-      <td>3211</td>
-      <td>133.596838</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2)%EC%9D%B8%EA%B5%AC-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0">2)&#51064;&#44396; &#45936;&#51060;&#53552; &#51221;&#47532;&#54616;&#44592;<a class="anchor-link" href="#2)%EC%9D%B8%EA%B5%AC-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#데이터 파일 읽기</span>
-<span class="n">pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;서울시인구.txt&#39;</span><span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">thousands</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-<span class="n">pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>기간</th>
-      <th>자치구</th>
-      <th>세대</th>
-      <th>계</th>
-      <th>남자</th>
-      <th>여자</th>
-      <th>계.1</th>
-      <th>남자.1</th>
-      <th>여자.1</th>
-      <th>계.2</th>
-      <th>남자.2</th>
-      <th>여자.2</th>
-      <th>세대당인구</th>
-      <th>65세이상고령자</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2021</td>
-      <td>합계</td>
-      <td>4426007</td>
-      <td>9736027</td>
-      <td>4721977</td>
-      <td>5014050</td>
-      <td>9509458</td>
-      <td>4618040</td>
-      <td>4891418</td>
-      <td>226569</td>
-      <td>103937</td>
-      <td>122632</td>
-      <td>2.15</td>
-      <td>1605416</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2021</td>
-      <td>종로구</td>
-      <td>73494</td>
-      <td>153789</td>
-      <td>74186</td>
-      <td>79603</td>
-      <td>144683</td>
-      <td>70183</td>
-      <td>74500</td>
-      <td>9106</td>
-      <td>4003</td>
-      <td>5103</td>
-      <td>1.97</td>
-      <td>27818</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2021</td>
-      <td>중구</td>
-      <td>63519</td>
-      <td>131787</td>
-      <td>64083</td>
-      <td>67704</td>
-      <td>122499</td>
-      <td>59630</td>
-      <td>62869</td>
-      <td>9288</td>
-      <td>4453</td>
-      <td>4835</td>
-      <td>1.93</td>
-      <td>24392</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2021</td>
-      <td>용산구</td>
-      <td>111036</td>
-      <td>237285</td>
-      <td>115085</td>
-      <td>122200</td>
-      <td>222953</td>
-      <td>107210</td>
-      <td>115743</td>
-      <td>14332</td>
-      <td>7875</td>
-      <td>6457</td>
-      <td>2.01</td>
-      <td>39070</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2021</td>
-      <td>성동구</td>
-      <td>134233</td>
-      <td>292672</td>
-      <td>142259</td>
-      <td>150413</td>
-      <td>285990</td>
-      <td>139380</td>
-      <td>146610</td>
-      <td>6682</td>
-      <td>2879</td>
-      <td>3803</td>
-      <td>2.13</td>
-      <td>46380</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Null data 있는지 확인하기</span>
-<span class="n">pop</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">result</span>
 </pre></div>
 
      </div>
@@ -14855,21 +14122,35 @@ dtype: int64</pre>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>기간          0
-자치구         0
-세대          0
-계           0
-남자          0
-여자          0
-계.1         0
-남자.1        0
-여자.1        0
-계.2         0
-남자.2        0
-여자.2        0
-세대당인구       0
-65세이상고령자    0
-dtype: int64</pre>
+<pre>{&#39;documents&#39;: [{&#39;address&#39;: {&#39;address_name&#39;: &#39;서울 용산구 한남동 743-32&#39;,
+    &#39;b_code&#39;: &#39;1117013100&#39;,
+    &#39;h_code&#39;: &#39;1117068500&#39;,
+    &#39;main_address_no&#39;: &#39;743&#39;,
+    &#39;mountain_yn&#39;: &#39;N&#39;,
+    &#39;region_1depth_name&#39;: &#39;서울&#39;,
+    &#39;region_2depth_name&#39;: &#39;용산구&#39;,
+    &#39;region_3depth_h_name&#39;: &#39;한남동&#39;,
+    &#39;region_3depth_name&#39;: &#39;한남동&#39;,
+    &#39;sub_address_no&#39;: &#39;32&#39;,
+    &#39;x&#39;: &#39;126.999715325041&#39;,
+    &#39;y&#39;: &#39;37.5372491556576&#39;},
+   &#39;address_name&#39;: &#39;서울 용산구 이태원로49길 14-2&#39;,
+   &#39;address_type&#39;: &#39;ROAD_ADDR&#39;,
+   &#39;road_address&#39;: {&#39;address_name&#39;: &#39;서울 용산구 이태원로49길 14-2&#39;,
+    &#39;building_name&#39;: &#39;&#39;,
+    &#39;main_building_no&#39;: &#39;14&#39;,
+    &#39;region_1depth_name&#39;: &#39;서울&#39;,
+    &#39;region_2depth_name&#39;: &#39;용산구&#39;,
+    &#39;region_3depth_name&#39;: &#39;한남동&#39;,
+    &#39;road_name&#39;: &#39;이태원로49길&#39;,
+    &#39;sub_building_no&#39;: &#39;2&#39;,
+    &#39;underground_yn&#39;: &#39;N&#39;,
+    &#39;x&#39;: &#39;126.999715325041&#39;,
+    &#39;y&#39;: &#39;37.5372491556576&#39;,
+    &#39;zone_no&#39;: &#39;04348&#39;},
+   &#39;x&#39;: &#39;126.999715325041&#39;,
+   &#39;y&#39;: &#39;37.5372491556576&#39;}],
+ &#39;meta&#39;: {&#39;is_end&#39;: True, &#39;pageable_count&#39;: 1, &#39;total_count&#39;: 1}}</pre>
 </div>
 
 </div>
@@ -14884,11 +14165,8 @@ dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#&#39;자치구&#39;,&#39;계&#39;,&#39;계.1&#39;,&#39;계.2&#39;,&#39;65세이상고령자‘ 컬럼만 추출하고</span>
-<span class="c1"># 이름을 &#39;구별&#39;,&#39;인구수&#39;,&#39;내국인&#39;,&#39;외국인&#39;,&#39;고령자&#39;로 변경</span>
-<span class="n">df2</span> <span class="o">=</span> <span class="n">pop</span><span class="p">[[</span><span class="s1">&#39;자치구&#39;</span><span class="p">,</span><span class="s1">&#39;계&#39;</span><span class="p">,</span><span class="s1">&#39;계.1&#39;</span><span class="p">,</span><span class="s1">&#39;계.2&#39;</span><span class="p">,</span><span class="s1">&#39;65세이상고령자&#39;</span><span class="p">]]</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;구별&#39;</span><span class="p">,</span><span class="s1">&#39;인구수&#39;</span><span class="p">,</span><span class="s1">&#39;내국인&#39;</span><span class="p">,</span><span class="s1">&#39;외국인&#39;</span><span class="p">,</span><span class="s1">&#39;고령자&#39;</span><span class="p">]</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_10</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;list.csv&#39;</span><span class="p">)</span> 
+<span class="n">top_10</span>
 </pre></div>
 
      </div>
@@ -14927,159 +14205,60 @@ dtype: int64</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>구별</th>
-      <th>인구수</th>
-      <th>내국인</th>
-      <th>외국인</th>
-      <th>고령자</th>
+      <th>상호</th>
+      <th>도로명주소</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>합계</td>
-      <td>9736027</td>
-      <td>9509458</td>
-      <td>226569</td>
-      <td>1605416</td>
+      <td>카페 노티드</td>
+      <td>서울특별시 강남구 도산대로53길 15</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>종로구</td>
-      <td>153789</td>
-      <td>144683</td>
-      <td>9106</td>
-      <td>27818</td>
+      <td>komune</td>
+      <td>서울특별시 용산구 이태원로49길 14-2 1층</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>중구</td>
-      <td>131787</td>
-      <td>122499</td>
-      <td>9288</td>
-      <td>24392</td>
+      <td>앵글340</td>
+      <td>서울특별시 종로구 장사동 청계천로 155</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>용산구</td>
-      <td>237285</td>
-      <td>222953</td>
-      <td>14332</td>
-      <td>39070</td>
+      <td>picnic</td>
+      <td>서울특별시 중구 남창동 194</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>성동구</td>
-      <td>292672</td>
-      <td>285990</td>
-      <td>6682</td>
-      <td>46380</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#첫번째 행 지우기</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구별</th>
-      <th>인구수</th>
-      <th>내국인</th>
-      <th>외국인</th>
-      <th>고령자</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>153789</td>
-      <td>144683</td>
-      <td>9106</td>
-      <td>27818</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중구</td>
-      <td>131787</td>
-      <td>122499</td>
-      <td>9288</td>
-      <td>24392</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>237285</td>
-      <td>222953</td>
-      <td>14332</td>
-      <td>39070</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>292672</td>
-      <td>285990</td>
-      <td>6682</td>
-      <td>46380</td>
+      <td>reveat</td>
+      <td>서울특별시 용산구 독서당로29길 6</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>광진구</td>
-      <td>352627</td>
-      <td>339996</td>
-      <td>12631</td>
-      <td>51723</td>
+      <td>금산제면소</td>
+      <td>서울특별시 중구 회현동 소공로6길 13</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>다운타우너</td>
+      <td>서울특별시 용산구 한남동 대사관로5길 12</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>카브루 브루펍</td>
+      <td>서울특별시 용산구 한남동 대사관로5길 12</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>달마시안</td>
+      <td>서울특별시 강남구 신사동 압구정로42길 42</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>백제정육</td>
+      <td>서울특별시 종로구 종로35길 34</td>
     </tr>
   </tbody>
 </table>
@@ -15098,10 +14277,7 @@ dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#&#39;외국인비율&#39;과&#39;고령자비율&#39;컬럼만들기</span>
-<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;외국인비율&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;고령자비율&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_10</span><span class="o">.</span><span class="n">index</span>
 </pre></div>
 
      </div>
@@ -15121,88 +14297,9 @@ dtype: int64</pre>
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구별</th>
-      <th>인구수</th>
-      <th>내국인</th>
-      <th>외국인</th>
-      <th>고령자</th>
-      <th>외국인비율</th>
-      <th>고령자비율</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>153789</td>
-      <td>144683</td>
-      <td>9106</td>
-      <td>27818</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중구</td>
-      <td>131787</td>
-      <td>122499</td>
-      <td>9288</td>
-      <td>24392</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>237285</td>
-      <td>222953</td>
-      <td>14332</td>
-      <td>39070</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>292672</td>
-      <td>285990</td>
-      <td>6682</td>
-      <td>46380</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>광진구</td>
-      <td>352627</td>
-      <td>339996</td>
-      <td>12631</td>
-      <td>51723</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>RangeIndex(start=0, stop=10, step=1)</pre>
 </div>
 
 </div>
@@ -15211,18 +14308,18 @@ dtype: int64</pre>
 
 </div>
 
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="CCTV%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%99%80-%EC%9D%B8%EA%B5%AC-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%95%A9%EC%B9%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0">CCTV&#45936;&#51060;&#53552;&#50752; &#51064;&#44396; &#45936;&#51060;&#53552; &#54633;&#52824;&#44256; &#51200;&#51109;&#54616;&#44592;<a class="anchor-link" href="#CCTV%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%99%80-%EC%9D%B8%EA%B5%AC-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%95%A9%EC%B9%98%EA%B3%A0-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0">&#182;</a></h2>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lng_list</span><span class="p">,</span> <span class="n">lat_list</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">top_10</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">local_url</span><span class="si">}</span><span class="s1">?query=</span><span class="si">{</span><span class="n">quote</span><span class="p">(</span><span class="n">top_10</span><span class="o">.</span><span class="n">도로명주소</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">lng_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;documents&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;x&#39;</span><span class="p">]))</span>
+    <span class="n">lat_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;documents&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;y&#39;</span><span class="p">]))</span>
 </pre></div>
 
      </div>
@@ -15238,70 +14335,29 @@ dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Temp/ipykernel_15244/3637181086.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      1</span> lng_list<span class="ansi-yellow-intense-fg ansi-bold">,</span> lat_list <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+<span class="ansi-green-fg">      2</span> <span class="ansi-green-intense-fg ansi-bold">for</span> i <span class="ansi-green-intense-fg ansi-bold">in</span> top_10<span class="ansi-yellow-intense-fg ansi-bold">.</span>index<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 3</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>url <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-blue-intense-fg ansi-bold">f&#39;{local_url}?query={quote(top_10.도로명주소[i])}&#39;</span>
+<span class="ansi-green-fg">      4</span>     result <span class="ansi-yellow-intense-fg ansi-bold">=</span> requests<span class="ansi-yellow-intense-fg ansi-bold">.</span>get<span class="ansi-yellow-intense-fg ansi-bold">(</span>url<span class="ansi-yellow-intense-fg ansi-bold">,</span> headers<span class="ansi-yellow-intense-fg ansi-bold">=</span>header<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>json<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">      5</span>     lng_list<span class="ansi-yellow-intense-fg ansi-bold">.</span>append<span class="ansi-yellow-intense-fg ansi-bold">(</span>float<span class="ansi-yellow-intense-fg ansi-bold">(</span>result<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;documents&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;x&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\lib\site-packages\pandas\core\generic.py</span> in <span class="ansi-cyan-fg">__getattr__</span><span class="ansi-blue-intense-fg ansi-bold">(self, name)</span>
+<span class="ansi-green-fg">   5485</span>         ):
+<span class="ansi-green-fg">   5486</span>             <span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">[</span>name<span class="ansi-yellow-intense-fg ansi-bold">]</span>
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 5487</span><span class="ansi-yellow-intense-fg ansi-bold">         </span><span class="ansi-green-intense-fg ansi-bold">return</span> object<span class="ansi-yellow-intense-fg ansi-bold">.</span>__getattribute__<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> name<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   5488</span> 
+<span class="ansi-green-fg">   5489</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> __setattr__<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> name<span class="ansi-yellow-intense-fg ansi-bold">:</span> str<span class="ansi-yellow-intense-fg ansi-bold">,</span> value<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">-&gt;</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구별</th>
-      <th>cctv댓수</th>
-      <th>최근증가율</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>1715</td>
-      <td>48.514851</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중구</td>
-      <td>2447</td>
-      <td>97.513514</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>2611</td>
-      <td>105.427136</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>3829</td>
-      <td>83.252721</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>광진구</td>
-      <td>3211</td>
-      <td>133.596838</td>
-    </tr>
-  </tbody>
-</table>
+<span class="ansi-red-intense-fg ansi-bold">AttributeError</span>: &#39;DataFrame&#39; object has no attribute &#39;도로명주소&#39;</pre>
 </div>
-</div>
-
 </div>
 
 </div>
@@ -15314,7 +14370,9 @@ dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">top_10</span><span class="p">[</span><span class="s1">&#39;위도&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lat_list</span>
+<span class="n">top_10</span><span class="p">[</span><span class="s1">&#39;경도&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lng_list</span>
+<span class="n">top_10</span>
 </pre></div>
 
      </div>
@@ -15330,359 +14388,20 @@ dtype: int64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">~\AppData\Local\Temp/ipykernel_15244/1656393420.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>top_10<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;위도&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> lat_list
+<span class="ansi-green-fg">      2</span> top_10<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;경도&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> lng_list
+<span class="ansi-green-fg">      3</span> top_10
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구별</th>
-      <th>인구수</th>
-      <th>내국인</th>
-      <th>외국인</th>
-      <th>고령자</th>
-      <th>외국인비율</th>
-      <th>고령자비율</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>종로구</td>
-      <td>153789</td>
-      <td>144683</td>
-      <td>9106</td>
-      <td>27818</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>중구</td>
-      <td>131787</td>
-      <td>122499</td>
-      <td>9288</td>
-      <td>24392</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>용산구</td>
-      <td>237285</td>
-      <td>222953</td>
-      <td>14332</td>
-      <td>39070</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>성동구</td>
-      <td>292672</td>
-      <td>285990</td>
-      <td>6682</td>
-      <td>46380</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>광진구</td>
-      <td>352627</td>
-      <td>339996</td>
-      <td>12631</td>
-      <td>51723</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;lat_list&#39; is not defined</pre>
 </div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 데이터 합치기</span>
-<span class="n">cctv_pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">df2</span><span class="p">)</span>
-<span class="n">cctv_pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>구별</th>
-      <th>cctv댓수</th>
-      <th>최근증가율</th>
-      <th>인구수</th>
-      <th>내국인</th>
-      <th>외국인</th>
-      <th>고령자</th>
-      <th>외국인비율</th>
-      <th>고령자비율</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>종로구</td>
-      <td>1715</td>
-      <td>48.514851</td>
-      <td>153789</td>
-      <td>144683</td>
-      <td>9106</td>
-      <td>27818</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>중구</td>
-      <td>2447</td>
-      <td>97.513514</td>
-      <td>131787</td>
-      <td>122499</td>
-      <td>9288</td>
-      <td>24392</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>용산구</td>
-      <td>2611</td>
-      <td>105.427136</td>
-      <td>237285</td>
-      <td>222953</td>
-      <td>14332</td>
-      <td>39070</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>성동구</td>
-      <td>3829</td>
-      <td>83.252721</td>
-      <td>292672</td>
-      <td>285990</td>
-      <td>6682</td>
-      <td>46380</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>광진구</td>
-      <td>3211</td>
-      <td>133.596838</td>
-      <td>352627</td>
-      <td>339996</td>
-      <td>12631</td>
-      <td>51723</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#‘구별’ 컬럼을 인덱스로 만들기</span>
-<span class="n">cctv_pop</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;구별&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">cctv_pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[&nbsp;]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>cctv댓수</th>
-      <th>최근증가율</th>
-      <th>인구수</th>
-      <th>내국인</th>
-      <th>외국인</th>
-      <th>고령자</th>
-      <th>외국인비율</th>
-      <th>고령자비율</th>
-    </tr>
-    <tr>
-      <th>구별</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>종로구</th>
-      <td>1715</td>
-      <td>48.514851</td>
-      <td>153789</td>
-      <td>144683</td>
-      <td>9106</td>
-      <td>27818</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>중구</th>
-      <td>2447</td>
-      <td>97.513514</td>
-      <td>131787</td>
-      <td>122499</td>
-      <td>9288</td>
-      <td>24392</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>용산구</th>
-      <td>2611</td>
-      <td>105.427136</td>
-      <td>237285</td>
-      <td>222953</td>
-      <td>14332</td>
-      <td>39070</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>성동구</th>
-      <td>3829</td>
-      <td>83.252721</td>
-      <td>292672</td>
-      <td>285990</td>
-      <td>6682</td>
-      <td>46380</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>광진구</th>
-      <td>3211</td>
-      <td>133.596838</td>
-      <td>352627</td>
-      <td>339996</td>
-      <td>12631</td>
-      <td>51723</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -15695,8 +14414,7 @@ dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 합친 데이터를 cctv_pop.csv로 저장하기</span>
-<span class="n">cctv_pop</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;cctv_pop.csv&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
